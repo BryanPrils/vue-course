@@ -7,14 +7,18 @@ export default {
         </div>
     </form>
   `,
+
   data(){
     return {
       newAssignment: ''
     }
   },
+
   methods:{
     add(){
-      alert('add')
+      this.$emit('add', this.newAssignment);
+
+      this.newAssignment = '';
     }
   }
 }
